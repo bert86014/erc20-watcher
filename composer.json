@@ -1,0 +1,20 @@
+{
+    "name": "leonis/erc20-watcher",
+    "description": "BlockChain Ethereum ERC20 Laravel Lumen PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yangliu",
+            "email": "yangliulnn@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "ext-swoole": "*",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "eaglewu/swoole-ide-helper": "dev-master"
+    }
+}
