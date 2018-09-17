@@ -14,7 +14,7 @@ class ERC20Watcher extends Command
 
     protected $description = 'Ethereum ERC20 Watcher';
 
-    private $blockNumber = 6335179;
+    private $blockNumber = 6245179;
 
     public function __construct()
     {
@@ -82,13 +82,7 @@ class ERC20Watcher extends Command
             $logs = $response->result;
             if (count($logs)) {
                 foreach ($logs as $log) {
-                    if (
-                        (new BigInteger($log->blockNumber, 16))
-                            ->add(new BigInteger(config('coins.confirmations'), 10))
-                            ->compare($blockNumber) == 1
-                    ) {
-                        event(new LogEvent($log));
-                    }
+                    event(new LogEvent($log));
                 }
             }
 

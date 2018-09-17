@@ -52,7 +52,7 @@ class Log
         $this->log = $log;
         $this->contract = $log->address;
         $this->from = $this->getAddressFromTopic($log->topics[1]);
-        $this->to = $this->getAddressFromTopic($log->topics[1]);
+        $this->to = $this->getAddressFromTopic($log->topics[2]);
         $this->value = $this->getNumberFromData($log->data);
         $this->blockNumber = $this->hex2num($log->blockNumber);
         $this->hash = $log->transactionHash;
